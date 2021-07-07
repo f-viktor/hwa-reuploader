@@ -74,7 +74,7 @@ func ParseAdvertisment(url string) advertisment {
 	images := strings.Split(trimBetween(div, `<div class="carousel-inner">`, `fa-map-marker">`), "\n")
 	for _, val := range images {
 		if strings.Contains(val, "<img") {
-			ad.imageUrls = append(ad.imageUrls, "https://hardverapro.hu"+trimBetween(val, `="`, `"`))
+			ad.imageUrls = append(ad.imageUrls, "https:"+trimBetween(val, `="`, `"`))
 		}
 	}
 
